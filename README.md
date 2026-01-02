@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+🧩 Workflow Builder UI
 
-## Project info
+A visual, interactive Workflow Builder built using React that allows users to create, edit, and manage structured workflows consisting of actions, conditional branches, and end nodes — all without using any third-party diagram or UI libraries.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project was developed as part of a Frontend Intern Take-Home Assignment to demonstrate skills in component architecture, state management, data modeling, and user experience design.
 
-## How can I edit this code?
+🚀 Live Demo
 
-There are several ways of editing your application.
+🔗 Live Application:
+👉 (Add your deployed link here — Vercel / Netlify)
 
-**Use Lovable**
+📦 GitHub Repository:
+👉 (This repository)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+✨ Features
+🖥️ Workflow Canvas
 
-Changes made via Lovable will be committed automatically to this repo.
+Starts with a root “Start” node
 
-**Use your preferred IDE**
+Displays workflow in a clear vertical flow layout
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Visually distinct and readable nodes
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Connection lines between parent and child nodes
 
-Follow these steps:
+🧱 Supported Node Types
+Node Type	Description	Children
+Action	A single task (e.g., Send Email)	1
+Branch	Conditional logic (True / False)	Multiple
+End	Terminates the workflow	0
+🛠️ Editing & Interactions
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+➕ Add nodes after any non-End node
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🔀 Add steps independently to True / False branches
 
-# Step 3: Install the necessary dependencies.
-npm i
+✏️ Edit node labels inline
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🗑️ Delete nodes (except Start)
 
-**Edit a file directly in GitHub**
+Parent automatically reconnects to child nodes to preserve flow
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+⭐ Bonus Features
 
-**Use GitHub Codespaces**
+💾 Save Workflow – Logs complete workflow JSON to the console
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+♻️ Clean and scalable data structure
 
-## What technologies are used for this project?
+🎯 Context-aware UI for adding nodes
 
-This project is built with:
+🧠 Data Modeling Approach
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The workflow is represented as a tree-like structure, where:
 
-## How can I deploy this project?
+Each node has a unique ID
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Nodes define their type (action, branch, end)
 
-## Can I connect a custom domain to my Lovable project?
+Relationships are maintained through child references
 
-Yes, you can!
+Branch nodes store multiple outgoing paths
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This design ensures:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Easy traversal
+
+Predictable updates
+
+Scalable extension (undo/redo, persistence, etc.)
