@@ -7,10 +7,10 @@ This project was developed as part of a Frontend Intern Take-Home Assignment to 
 🚀 Live Demo
 
 🔗 Live Application:
-👉 (Add your deployed link here — Vercel / Netlify)
+👉 https://workflow-canva-ui-assignment.vercel.app/
 
 📦 GitHub Repository:
-👉 (This repository)
+👉 https://github.com/Harshit-Khurana/workflow-canva-ui-assignment-
 
 ✨ Features
 🖥️ Workflow Canvas
